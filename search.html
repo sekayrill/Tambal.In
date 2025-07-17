@@ -1,0 +1,138 @@
+                </div>
+                
+                <div class="location-info">
+                    <div class="location-rating">
+                        <div class="stars" id="modalStars"></div>
+                        <span class="rating-text" id="modalRating">4.5</span>
+                        <span class="review-count" id="modalReviews">(25 ulasan)</span>
+                    </div>
+                    
+                    <div class="location-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="modalAddress">Alamat bengkel</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span id="modalPhone">Nomor telepon</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span id="modalHours">Jam operasional</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-route"></i>
+                            <span id="modalDistance">Jarak dari lokasi Anda</span>
+                        </div>
+                    </div>
+                    
+                    <div class="services-offered">
+                        <h4>Layanan Tersedia</h4>
+                        <div class="service-tags" id="modalServices">
+                            <!-- Service tags will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <div class="price-info">
+                        <h4>Estimasi Harga</h4>
+                        <div class="price-list" id="modalPrices">
+                            <!-- Price list will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" id="directionsBtn">
+                    <i class="fas fa-directions"></i>
+                    Petunjuk Arah
+                </button>
+                <button type="button" class="btn-primary" id="bookNowBtn">
+                    <i class="fas fa-calendar-check"></i>
+                    Pesan Sekarang
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content booking-modal">
+            <div class="modal-header">
+                <h3>Pesan Layanan</h3>
+                <button type="button" class="modal-close" id="bookingModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label for="vehicleType">Jenis Kendaraan</label>
+                        <select id="vehicleType" required>
+                            <option value="">Pilih jenis kendaraan</option>
+                            <option value="mobil">Mobil</option>
+                            <option value="motor">Motor</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceNeeded">Layanan yang Dibutuhkan</label>
+                        <select id="serviceNeeded" required>
+                            <option value="">Pilih layanan</option>
+                            <option value="tambal_ban">Tambal Ban</option>
+                            <option value="ganti_ban">Ganti Ban Baru</option>
+                            <option value="balancing">Balancing</option>
+                            <option value="spooring">Spooring</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookingDate">Tanggal & Waktu</label>
+                        <input type="datetime-local" id="bookingDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">Catatan Tambahan</label>
+                        <textarea id="notes" placeholder="Jelaskan kondisi ban atau kebutuhan khusus..."></textarea>
+                    </div>
+                    
+                    <div class="price-summary">
+                        <div class="price-item">
+                            <span>Biaya Layanan</span>
+                            <span id="servicePrice">Rp 0</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Biaya Admin</span>
+                            <span>Rp 2.500</span>
+                        </div>
+                        <div class="price-item total">
+                            <span>Total</span>
+                            <span id="totalPrice">Rp 2.500</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" id="cancelBookingBtn">Batal</button>
+                <button type="submit" form="bookingForm" class="btn-primary" id="confirmBookingBtn">
+                    Konfirmasi Pesanan
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/map.js"></script>
+    
+    <!-- Google Maps API (Replace YOUR_API_KEY with actual key) -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap"></script>
+</body>
+</html>
+

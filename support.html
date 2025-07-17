@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service - Tambal.In</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/support.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">
+                    <h2>Tambal.<span>In</span></h2>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Beranda</a>
+                <a href="../index.html#services" class="nav-link">Layanan</a>
+                <a href="search.html" class="nav-link">Lokasi</a>
+                <a href="../index.html#about" class="nav-link">Tentang</a>
+                <a href="#" class="nav-link active">Kontak</a>
+            </div>
+            <div class="nav-auth">
+                <a href="login.html" class="btn-login">Masuk</a>
+                <a href="register.html" class="btn-register">Daftar</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Support Header -->
+    <section class="support-header">
+        <div class="container">
+            <h1>Pusat Bantuan</h1>
+            <p>Kami siap membantu Anda 24/7. Hubungi tim support kami untuk mendapatkan bantuan terbaik.</p>
+        </div>
+    </section>
+
+    <!-- Quick Help -->
+    <section class="quick-help">
+        <div class="container">
+            <h2>Bantuan Cepat</h2>
+            <div class="help-grid">
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Telepon</h3>
+                    <p>Hubungi langsung tim support kami</p>
+                    <a href="tel:+6281234567890" class="help-link">
+                        <strong>+62 812-3456-7890</strong>
+                    </a>
+                    <span class="help-status online">Online 24/7</span>
+                </div>
+
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>Kirim pertanyaan melalui email</p>
+                    <a href="mailto:support@tambal.in" class="help-link">
+                        <strong>support@tambal.in</strong>
+                    </a>
+                    <span class="help-status">Respon dalam 2 jam</span>
+                </div>
+
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Chat langsung dengan agent kami</p>
+                    <button class="help-link chat-btn" id="startChatBtn">
+                        <strong>Mulai Chat</strong>
+                    </button>
+                    <span class="help-status online">Agent tersedia</span>
+                </div>
+
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Chat melalui WhatsApp</p>
+                    <a href="https://wa.me/6281234567890" class="help-link" target="_blank">
+                        <strong>+62 812-3456-7890</strong>
+                    </a>
+                    <span class="help-status online">Online 24/7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & FAQ -->
+    <section class="support-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Contact Form -->
+                <div class="contact-section">
+                    <div class="section-card">
+                        <h2>Kirim Pesan</h2>
+                        <p>Isi form di bawah ini dan kami akan merespon dalam waktu 24 jam</p>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">Nama Depan *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Nama Belakang *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Nomor Telepon</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="category">Kategori Pertanyaan *</label>
+                                <select id="category" name="category" required>
+                                    <option value="">Pilih kategori</option>
+                                    <option value="technical">Masalah Teknis</option>
+                                    <option value="booking">Pemesanan</option>
+                                    <option value="payment">Pembayaran</option>
+                                    <option value="account">Akun</option>
+                                    <option value="general">Pertanyaan Umum</option>
+                                    <option value="complaint">Keluhan</option>
+                                    <option value="suggestion">Saran</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subjek *</label>
+                                <input type="text" id="subject" name="subject" placeholder="Ringkasan singkat masalah Anda" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Pesan *</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Jelaskan masalah atau pertanyaan Anda secara detail..." required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="priority">Prioritas</label>
+                                <select id="priority" name="priority">
+                                    <option value="low">Rendah</option>
+                                    <option value="medium" selected>Sedang</option>
+                                    <option value="high">Tinggi</option>
+                                    <option value="urgent">Mendesak</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Saya ingin menerima update dan newsletter dari Tambal.In
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-submit" id="submitBtn">
+                                <span class="btn-text">Kirim Pesan</span>
+                                <div class="btn-loader hidden">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <div class="section-card">
+                        <h2>Pertanyaan yang Sering Diajukan</h2>
+                        <p>Temukan jawaban untuk pertanyaan umum di bawah ini</p>
+                        
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <button class="faq-question" type="button">
+                                    <span>Bagaimana cara mencari bengkel tambal ban terdekat?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Anda dapat menggunakan fitur pencarian di halaman "Cari Lokasi". Masukkan alamat atau gunakan lokasi saat ini, lalu sistem akan menampilkan bengkel terdekat dengan rating dan harga.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" type="button">
+                                    <span>Apakah saya perlu membuat akun untuk memesan layanan?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Ya, Anda perlu membuat akun untuk dapat memesan layanan. Akun memungkinkan Anda melacak pesanan, melihat riwayat, dan mendapatkan penawaran khusus.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" type="button">
+                                    <span>Metode pembayaran apa saja yang tersedia?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Kami menerima berbagai metode pembayaran termasuk kartu kredit/debit, transfer bank, e-wallet (GoPay, OVO, DANA), dan pembayaran tunai di lokasi.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" type="button">
+                                    <span>Bagaimana jika saya perlu membatalkan pesanan?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Anda dapat membatalkan pesanan hingga 1 jam sebelum waktu yang dijadwalkan. Pembatalan dapat dilakukan melalui akun Anda atau dengan menghubungi customer service.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" type="button">
+                                    <span>Apakah ada garansi untuk layanan tambal ban?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Ya, semua layanan tambal ban memiliki garansi 30 hari. Jika terjadi masalah dalam periode garansi, Anda dapat kembali ke bengkel yang sama untuk perbaikan gratis.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" type="button">
+                                    <span>Bagaimana cara memberikan rating dan review?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Setelah layanan selesai, Anda akan menerima notifikasi untuk memberikan rating dan review. Anda juga dapat memberikan review melalui halaman riwayat pesanan di akun Anda.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="stats-card">
+                        <h3>Statistik Support</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">< 2 jam</div>
+                                <div class="stat-label">Rata-rata respon</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">98%</div>
+                                <div class="stat-label">Tingkat kepuasan</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Ketersediaan</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">10K+</div>
+                                <div class="stat-label">Tiket diselesaikan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-info">
+                <div class="agent-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="agent-details">
+                    <span class="agent-name">Tim Support</span>
+                    <span class="agent-status">Online</span>
+                </div>
+            </div>
+            <button class="chat-close" id="closeChatBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message agent-message">
+                <div class="message-content">
+                    <p>Halo! Selamat datang di Tambal.In. Ada yang bisa kami bantu?</p>
+                </div>
+                <div class="message-time">Baru saja</div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="chatInputField" placeholder="Ketik pesan Anda...">
+            <button type="button" id="sendChatBtn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h3>Pesan Terkirim!</h3>
+            </div>
+            <div class="modal-body">
+                <p>Terima kasih telah menghubungi kami. Tim support akan merespon dalam waktu 24 jam.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" id="closeSuccessBtn">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/support.js"></script>
+</body>
+</html>
+

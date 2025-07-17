@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - Tambal.In</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/payment.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">
+                    <i class="fas fa-tools"></i>
+                    <span>Tambal.In</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Beranda</a>
+                <a href="search.html" class="nav-link">Cari Bengkel</a>
+                <a href="support.html" class="nav-link">Bantuan</a>
+                <a href="login.html" class="nav-link" id="authLink">Masuk</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <div class="container">
+            <div class="payment-header">
+                <h1>Pembayaran</h1>
+                <p>Selesaikan pembayaran untuk konfirmasi pesanan Anda</p>
+            </div>
+
+            <div class="payment-container">
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2>Ringkasan Pesanan</h2>
+                    
+                    <div class="booking-details" id="bookingDetails">
+                        <div class="detail-item">
+                            <span class="label">Bengkel:</span>
+                            <span class="value" id="workshopName">Loading...</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Alamat:</span>
+                            <span class="value" id="workshopAddress">Loading...</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Layanan:</span>
+                            <span class="value" id="serviceType">Loading...</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Tanggal & Waktu:</span>
+                            <span class="value" id="bookingDateTime">Loading...</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Catatan:</span>
+                            <span class="value" id="bookingNotes">-</span>
+                        </div>
+                    </div>
+
+                    <div class="price-breakdown">
+                        <div class="price-item">
+                            <span>Biaya Layanan</span>
+                            <span id="servicePrice">Rp 0</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Biaya Admin</span>
+                            <span id="adminFee">Rp 2.500</span>
+                        </div>
+                        <div class="price-item total">
+                            <span>Total</span>
+                            <span id="totalPrice">Rp 0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Methods -->
+                <div class="payment-methods">
+                    <h2>Pilih Metode Pembayaran</h2>
+                    
+                    <div class="payment-options">
+                        <!-- E-Wallet -->
+                        <div class="payment-category">
+                            <h3>E-Wallet</h3>
+                            <div class="payment-option">
+                                <input type="radio" id="gopay" name="payment_method" value="gopay">
+                                <label for="gopay">
+                                    <div class="payment-icon">
+                                        <i class="fab fa-google-pay"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">GoPay</span>
+                                        <span class="payment-desc">Bayar dengan GoPay</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="payment-option">
+                                <input type="radio" id="ovo" name="payment_method" value="ovo">
+                                <label for="ovo">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-wallet"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">OVO</span>
+                                        <span class="payment-desc">Bayar dengan OVO</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="payment-option">
+                                <input type="radio" id="dana" name="payment_method" value="dana">
+                                <label for="dana">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">DANA</span>
+                                        <span class="payment-desc">Bayar dengan DANA</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Bank Transfer -->
+                        <div class="payment-category">
+                            <h3>Transfer Bank</h3>
+                            <div class="payment-option">
+                                <input type="radio" id="bca" name="payment_method" value="bca">
+                                <label for="bca">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">BCA</span>
+                                        <span class="payment-desc">Transfer ke rekening BCA</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="payment-option">
+                                <input type="radio" id="mandiri" name="payment_method" value="mandiri">
+                                <label for="mandiri">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">Mandiri</span>
+                                        <span class="payment-desc">Transfer ke rekening Mandiri</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="payment-option">
+                                <input type="radio" id="bni" name="payment_method" value="bni">
+                                <label for="bni">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">BNI</span>
+                                        <span class="payment-desc">Transfer ke rekening BNI</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Credit Card -->
+                        <div class="payment-category">
+                            <h3>Kartu Kredit/Debit</h3>
+                            <div class="payment-option">
+                                <input type="radio" id="credit_card" name="payment_method" value="credit_card">
+                                <label for="credit_card">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-credit-card"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">Kartu Kredit/Debit</span>
+                                        <span class="payment-desc">Visa, Mastercard, JCB</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Cash -->
+                        <div class="payment-category">
+                            <h3>Tunai</h3>
+                            <div class="payment-option">
+                                <input type="radio" id="cash" name="payment_method" value="cash">
+                                <label for="cash">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">Bayar di Tempat</span>
+                                        <span class="payment-desc">Bayar tunai saat layanan selesai</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Credit Card Form -->
+                    <div class="credit-card-form" id="creditCardForm" style="display: none;">
+                        <h3>Informasi Kartu</h3>
+                        <form id="cardForm">
+                            <div class="form-group">
+                                <label for="cardNumber">Nomor Kartu</label>
+                                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                <span class="error-message" id="cardNumberError"></span>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiryDate">Tanggal Kadaluarsa</label>
+                                    <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                                    <span class="error-message" id="expiryDateError"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" placeholder="123" maxlength="4">
+                                    <span class="error-message" id="cvvError"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cardName">Nama di Kartu</label>
+                                <input type="text" id="cardName" placeholder="Nama sesuai kartu">
+                                <span class="error-message" id="cardNameError"></span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Payment Button -->
+                    <div class="payment-actions">
+                        <button class="btn-secondary" onclick="history.back()">Kembali</button>
+                        <button class="btn-primary" id="payButton" disabled>
+                            <span class="btn-text">Bayar Sekarang</span>
+                            <div class="btn-loader hidden">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Processing Modal -->
+    <div class="modal" id="processingModal">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="processing-animation">
+                    <i class="fas fa-credit-card fa-3x"></i>
+                    <div class="spinner"></div>
+                </div>
+                <h3>Memproses Pembayaran</h3>
+                <p>Mohon tunggu, pembayaran Anda sedang diproses...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Pembayaran Berhasil!</h3>
+                <p>Pesanan Anda telah dikonfirmasi. Anda akan menerima notifikasi lebih lanjut.</p>
+                <div class="booking-id">
+                    <strong>ID Pesanan: <span id="finalBookingId"></span></strong>
+                </div>
+                <button class="btn-primary" id="viewBookingBtn">Lihat Pesanan</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Failed Modal -->
+    <div class="modal" id="failedModal">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="error-icon">
+                    <i class="fas fa-times-circle"></i>
+                </div>
+                <h3>Pembayaran Gagal</h3>
+                <p id="failureReason">Terjadi kesalahan saat memproses pembayaran. Silakan coba lagi.</p>
+                <div class="modal-actions">
+                    <button class="btn-secondary" id="closeFailedBtn">Tutup</button>
+                    <button class="btn-primary" id="retryPaymentBtn">Coba Lagi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-tools"></i>
+                        <span>Tambal.In</span>
+                    </div>
+                    <p>Platform terpercaya untuk menemukan bengkel tambal ban terdekat dengan mudah dan cepat.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="search.html">Cari Bengkel</a></li>
+                        <li><a href="#services">Tambal Ban</a></li>
+                        <li><a href="#services">Ganti Ban</a></li>
+                        <li><a href="#services">Balancing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Bantuan</h3>
+                    <ul>
+                        <li><a href="support.html">Customer Service</a></li>
+                        <li><a href="support.html">FAQ</a></li>
+                        <li><a href="support.html">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
+                        <p><i class="fas fa-envelope"></i> support@tambal.in</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tambal.In. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/payment.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - Tambal.In</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">
+                    <h2>Tambal.<span>In</span></h2>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Beranda</a>
+                <a href="../index.html#services" class="nav-link">Layanan</a>
+                <a href="../index.html#locations" class="nav-link">Lokasi</a>
+                <a href="../index.html#about" class="nav-link">Tentang</a>
+                <a href="../index.html#contact" class="nav-link">Kontak</a>
+            </div>
+            <div class="nav-auth">
+                <a href="login.html" class="btn-login">Masuk</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Register Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-content">
+                <div class="auth-header">
+                    <h1>Bergabung dengan Tambal.In</h1>
+                    <p>Daftar sekarang dan nikmati kemudahan mencari layanan tambal ban</p>
+                </div>
+
+                <form class="auth-form" id="registerForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Nama Depan</label>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="firstName" name="firstName" placeholder="Nama depan" required>
+                            </div>
+                            <span class="error-message" id="firstNameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Nama Belakang</label>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="lastName" name="lastName" placeholder="Nama belakang" required>
+                            </div>
+                            <span class="error-message" id="lastNameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                        </div>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Nomor Telepon</label>
+                        <div class="input-group">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" id="phone" name="phone" placeholder="Contoh: 08123456789" required>
+                        </div>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" name="password" placeholder="Minimal 8 karakter" required>
+                            <button type="button" class="password-toggle" id="passwordToggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-bar">
+                                <div class="strength-fill" id="strengthFill"></div>
+                            </div>
+                            <span class="strength-text" id="strengthText">Lemah</span>
+                        </div>
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Konfirmasi Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Ulangi password" required>
+                            <button type="button" class="password-toggle" id="confirmPasswordToggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-message" id="confirmPasswordError"></span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                            <span class="checkmark"></span>
+                            Saya setuju dengan <a href="#" target="_blank">Syarat & Ketentuan</a> dan <a href="#" target="_blank">Kebijakan Privasi</a>
+                        </label>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Saya ingin menerima newsletter dan penawaran khusus
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-auth" id="registerBtn">
+                        <span class="btn-text">Daftar Sekarang</span>
+                        <div class="btn-loader hidden">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                    </button>
+
+                    <div class="auth-divider">
+                        <span>atau</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="btn-social google" id="googleRegister">
+                            <i class="fab fa-google"></i>
+                            Daftar dengan Google
+                        </button>
+                        <button type="button" class="btn-social facebook" id="facebookRegister">
+                            <i class="fab fa-facebook-f"></i>
+                            Daftar dengan Facebook
+                        </button>
+                    </div>
+
+                    <div class="auth-footer">
+                        <p>Sudah punya akun? <a href="login.html">Masuk sekarang</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="auth-image">
+                <div class="image-content">
+                    <div class="feature-highlight">
+                        <i class="fas fa-users"></i>
+                        <h3>Komunitas Terpercaya</h3>
+                        <p>Bergabung dengan ribuan pengguna yang puas</p>
+                    </div>
+                    <div class="feature-highlight">
+                        <i class="fas fa-gift"></i>
+                        <h3>Bonus Pendaftaran</h3>
+                        <p>Dapatkan diskon khusus untuk layanan pertama</p>
+                    </div>
+                    <div class="feature-highlight">
+                        <i class="fas fa-star"></i>
+                        <h3>Layanan Premium</h3>
+                        <p>Akses ke bengkel terbaik dengan rating tinggi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h3>Pendaftaran Berhasil!</h3>
+            </div>
+            <div class="modal-body">
+                <p>Selamat! Akun Anda telah berhasil dibuat. Silakan cek email untuk verifikasi.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" id="continueBtn">Lanjutkan ke Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal" id="errorModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-exclamation-triangle error-icon"></i>
+                <h3>Pendaftaran Gagal</h3>
+            </div>
+            <div class="modal-body">
+                <p id="errorMessage">Terjadi kesalahan saat mendaftar. Silakan coba lagi.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="closeErrorBtn">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>
+

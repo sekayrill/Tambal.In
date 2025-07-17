@@ -1,0 +1,422 @@
+/* Responsive Design */
+
+/* Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: var(--transition-normal);
+        box-shadow: var(--shadow-lg);
+        padding: var(--spacing-8) 0;
+        gap: var(--spacing-4);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-auth {
+        display: none;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-8);
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        gap: var(--spacing-6);
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-8);
+    }
+
+    .features-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-8);
+        text-align: center;
+    }
+
+    .features-image {
+        order: -1;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-6);
+    }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-3);
+    }
+
+    .nav-container {
+        padding: 0 var(--spacing-3);
+    }
+
+    .nav-logo h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    .hero {
+        padding: 100px 0 var(--spacing-12);
+    }
+
+    .hero-container {
+        padding: 0 var(--spacing-3);
+    }
+
+    .hero-title {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--spacing-4);
+    }
+
+    .hero-description {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-6);
+    }
+
+    .hero-buttons {
+        margin-bottom: var(--spacing-8);
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: var(--spacing-3) var(--spacing-5);
+        font-size: var(--font-size-sm);
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: var(--spacing-4);
+    }
+
+    .stat-number {
+        font-size: var(--font-size-xl);
+    }
+
+    .section-header h2 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .section-header p {
+        font-size: var(--font-size-base);
+    }
+
+    .services {
+        padding: var(--spacing-12) 0;
+    }
+
+    .service-card {
+        padding: var(--spacing-6);
+    }
+
+    .service-card h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    .service-price {
+        font-size: var(--font-size-base);
+    }
+
+    .how-it-works {
+        padding: var(--spacing-12) 0;
+    }
+
+    .step-card {
+        padding: var(--spacing-6);
+    }
+
+    .step-icon {
+        width: 60px;
+        height: 60px;
+        margin: var(--spacing-6) auto var(--spacing-4);
+    }
+
+    .step-icon i {
+        font-size: var(--font-size-2xl);
+    }
+
+    .step-card h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    .features {
+        padding: var(--spacing-12) 0;
+    }
+
+    .features-text h2 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-3);
+    }
+
+    .feature-item i {
+        align-self: center;
+    }
+
+    .footer {
+        padding: var(--spacing-12) 0 var(--spacing-6);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Large Mobile Styles (576px and below) */
+@media (max-width: 576px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        margin: 0 var(--spacing-2);
+    }
+
+    .hero-card {
+        max-width: 250px;
+        padding: var(--spacing-6);
+    }
+
+    .hero-card i {
+        font-size: 2rem;
+    }
+
+    .hero-card h3 {
+        font-size: var(--font-size-lg);
+    }
+}
+
+/* Extra Small Mobile (320px and below) */
+@media (max-width: 320px) {
+    .nav-container {
+        padding: 0 var(--spacing-2);
+    }
+
+    .container {
+        padding: 0 var(--spacing-2);
+    }
+
+    .hero-container {
+        padding: 0 var(--spacing-2);
+    }
+
+    .hero-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: var(--spacing-2) var(--spacing-4);
+        font-size: var(--font-size-xs);
+    }
+
+    .service-card,
+    .step-card {
+        padding: var(--spacing-4);
+    }
+
+    .section-header h2 {
+        font-size: var(--font-size-2xl);
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 90px 0 var(--spacing-8);
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--spacing-3);
+    }
+
+    .hero-description {
+        margin-bottom: var(--spacing-4);
+    }
+
+    .hero-buttons {
+        margin-bottom: var(--spacing-6);
+    }
+
+    .hero-stats {
+        gap: var(--spacing-4);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .nav-toggle,
+    .hero-buttons,
+    .footer {
+        display: none;
+    }
+
+    .hero {
+        padding: var(--spacing-4) 0;
+        background: var(--white);
+    }
+
+    .service-card,
+    .step-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid var(--gray-200);
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+    h1, h2, h3, h4 {
+        color: var(--gray-900) !important;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-card,
+    .service-card,
+    .step-card {
+        box-shadow: var(--shadow-lg);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .floating {
+        animation: none;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #1f2937;
+        --gray-100: #111827;
+        --gray-200: #374151;
+        --gray-500: #9ca3af;
+        --gray-700: #f3f4f6;
+        --gray-900: #ffffff;
+    }
+
+    .navbar {
+        background: var(--gray-100);
+        border-bottom: 1px solid var(--gray-200);
+    }
+
+    .hero {
+        background: linear-gradient(135deg, var(--gray-100) 0%, var(--white) 100%);
+    }
+
+    .service-card,
+    .hero-card,
+    .feature-card {
+        background: var(--gray-100);
+        border: 1px solid var(--gray-200);
+    }
+
+    .services,
+    .features {
+        background: var(--white);
+    }
+
+    .how-it-works {
+        background: var(--gray-100);
+    }
+}
+
+/* Focus Styles for Accessibility */
+.nav-link:focus,
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-login:focus,
+.btn-register:focus {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+/* Hover Effects for Touch Devices */
+@media (hover: none) {
+    .service-card:hover,
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        transform: none;
+    }
+
+    .service-card:active,
+    .btn-primary:active,
+    .btn-secondary:active {
+        transform: scale(0.98);
+    }
+}
+
